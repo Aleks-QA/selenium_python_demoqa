@@ -11,9 +11,8 @@ class TextBoxPage(BasePage):
     locators = TextBoxPageLocators()
 
     def fill_all_fields(self):
-        # шаги для  заполнения полей
-        # self.element_is_visible(self.locators.EMAIL).send_keys("hgj@mail.ru")#вручную
-        person_info = next(generated_person())  # иттератор который позволяет взять по одному разу
+        """Шаги для заполнения полей"""
+        person_info = next(generated_person())
         full_name = person_info.full_name
         email = person_info.email
         current_address = person_info.current_address
@@ -22,13 +21,11 @@ class TextBoxPage(BasePage):
         self.element_is_visible(self.locators.EMAIL).send_keys(email)
         self.element_is_visible(self.locators.CURRENT_ADDRESS).send_keys(current_address)
         self.element_is_visible(self.locators.PERMANENT_ADDRESS).send_keys(permanent_address)
-        # нажать на видимый
         self.element_is_visible(self.locators.SUBMIT).click()
         return full_name, email, current_address, permanent_address
-        # time.sleep(5)
 
     def check_field_form(self):
-        # вытянуть текст со страницы для дальнейшей проверки  .split(':')[1]для того чтобы взять часть текста
+        """Вытянуть текст со страницы для дальнейшей проверки"""
         full_name = self.element_is_present(self.locators.CREATED_FULL_NAME).text.split(':')[1]
         email = self.element_is_present(self.locators.CREATED_EMAIL).text.split(':')[1]
         current_address = self.element_is_present(self.locators.CREATED_CURRENT_ADDRESS).text.split(':')[1]
@@ -36,15 +33,15 @@ class TextBoxPage(BasePage):
         return full_name, email, current_address, permanent_address
 
 
-
 class CheckBoxPage(BasePage):
+    """Работа с чек-боксами"""
     locators = CheckBoxPageLocators()
 
     def open_full_list(self):
         self.element_is_visible(self.locators.EXPAND_ALL_BUTTON).click()
 
     def click_random_checkbox(self):
-        # положить в список все элементы
+        """Положить в список все элементы"""
         item_list = self.elements_are_visible(self.locators.ITEM_LIST)
         count = 21
         while count != 0:
@@ -57,13 +54,12 @@ class CheckBoxPage(BasePage):
                 break
         # time.sleep(2)
 
-    # после того как отметили чек бокс будем ходить и проверять отмеченные и добавлять в список
     def get_checked_checkboxes(self):
+        """После того как отметили чек бокс будем ходить и проверять отмеченные и добавлять в список"""
         checked_list = self.element_are_present(self.locators.CHECKED_ITEMS)
         data = []
         for box in checked_list:
             title_item = box.find_element("xpath", self.locators.TITLE_ITEM)
-            # print(title_item.text)
             data.append(title_item.text)
         return str(data).replace(' ', '').replace('.doc', '').replace('.', '').lower()
 
@@ -76,6 +72,7 @@ class CheckBoxPage(BasePage):
 
 
 class RadioButtonPage(BasePage):
+    """Работа с радио-батон"""
     locators = RadioButtonPageLocators()
 
     def click_on_the_radio_button(self, choice):
@@ -83,19 +80,19 @@ class RadioButtonPage(BasePage):
                    'impressive': self.locators.IMPRESSIVE_RADIOBUTTON,
                    'no': self.locators.NO_RADIOBUTTON
                    }
-
         radio = self.element_is_visible(choices[choice]).click()
 
     def get_output_result(self):
         return self.element_is_present(self.locators.OUTPUT_RADIOBUTTON).text
 
+
 class WebTablePage(BasePage):
+    """Работа с таблицей"""
     locators = WebTablePageLocators()
 
-    def add_new_person(self,count = 1):
-        #заполнение таблицы
+    def add_new_person(self, count=1):
+        """Заполнение таблицы"""
         i = 0
-        # new_person = []
         while i < count:
             person_info = next(generated_person())
             firstname = person_info.firstname
@@ -113,10 +110,7 @@ class WebTablePage(BasePage):
             self.element_is_visible(self.locators.DEPARTMENT_INPUT).send_keys(department)
             self.element_is_visible(self.locators.SUBMIT).click()
             i += 1
-            # new_person_while = [firstname,lastname,str(age),email,str(salary),department]
-            return [firstname,lastname,str(age),email,str(salary),department]
-            # new_person.append(new_person_while)
-        # return new_person
+            return [firstname, lastname, str(age), email, str(salary), department]
 
     def check_new_added_person(self):
         person_list = self.element_are_present(self.locators.FULL_PEOPLE_LIST)
@@ -125,11 +119,10 @@ class WebTablePage(BasePage):
             data.append(item.text.splitlines())
         return data
 
-    def search_some_person(self,key_word):
+    def search_some_person(self, key_word):
         self.element_is_visible(self.locators.INPUT_SEARCH).send_keys(key_word)
 
     def check_search_person(self):
         delete_button = self.element_is_present(self.locators.DELETE_BUTTON)
         row = delete_button.find_element("xpath", self.locators.ROW_PARENT)
-
         return row.text.splitlines()

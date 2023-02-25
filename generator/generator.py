@@ -1,5 +1,4 @@
 import random
-
 from data.data import Person
 from faker import Faker
 
@@ -20,9 +19,6 @@ def generated_person():
         age=random.randint(10,99),
         salary=random.randint(10000,99000),
         department=faker_ru.job()
-
-        # mobile=faker_en.msisdn(),
-        # subject='English'
     )
 
 
