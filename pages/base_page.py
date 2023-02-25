@@ -39,4 +39,3 @@ class BasePage:
         # перемещать нас к нужному элементу
         # execute_script позволяет запускать скрипты
         self.driver.execute_script("arguments[0].scrollIntoView();", element)
-
