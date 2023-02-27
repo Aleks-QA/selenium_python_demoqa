@@ -1,0 +1,150 @@
+
+-----
+Test: tests/elements_test.py::TestElements::TestTextBox::test_text_box (call)
+Start time: 2023-02-27 20:46:28.301934
+Start name method: fill_all_fields
+
+End time: 2023-02-27 20:46:28.575304
+End name method: fill_all_fields
+URL: https://demoqa.com/text-box
+-----
+
+-----
+Test: tests/elements_test.py::TestElements::TestTextBox::test_text_box (call)
+Start time: 2023-02-27 20:46:28.576301
+Start name method: check_field_form
+
+End time: 2023-02-27 20:46:28.634479
+End name method: check_field_form
+URL: https://demoqa.com/text-box
+-----
+
+-----
+Test: tests/elements_test.py::TestElements::TestCheckBox::test_check_box (call)
+Start time: 2023-02-27 20:46:34.611721
+Start name method: open_full_list
+
+End time: 2023-02-27 20:46:34.660537
+End name method: open_full_list
+URL: https://demoqa.com/checkbox
+-----
+
+-----
+Test: tests/elements_test.py::TestElements::TestCheckBox::test_check_box (call)
+Start time: 2023-02-27 20:46:34.660537
+Start name method: click_random_checkbox
+
+End time: 2023-02-27 20:46:35.188991
+End name method: click_random_checkbox
+URL: https://demoqa.com/checkbox
+-----
+
+-----
+Test: tests/elements_test.py::TestElements::TestCheckBox::test_check_box (call)
+Start time: 2023-02-27 20:46:35.188991
+Start name method: get_checked_checkboxes
+
+End time: 2023-02-27 20:46:35.352566
+End name method: get_checked_checkboxes
+URL: https://demoqa.com/checkbox
+-----
+
+-----
+Test: tests/elements_test.py::TestElements::TestCheckBox::test_check_box (call)
+Start time: 2023-02-27 20:46:35.352566
+Start name method: get_output_result
+
+End time: 2023-02-27 20:46:35.424301
+End name method: get_output_result
+URL: https://demoqa.com/checkbox
+-----
+
+-----
+Test: tests/elements_test.py::TestElements::TestRadioButton::test_radio_button (call)
+Start time: 2023-02-27 20:46:41.908315
+Start name method: click_on_the_radio_button
+
+End time: 2023-02-27 20:46:41.951613
+End name method: click_on_the_radio_button
+URL: https://demoqa.com/radio-button
+-----
+
+-----
+Test: tests/elements_test.py::TestElements::TestRadioButton::test_radio_button (call)
+Start time: 2023-02-27 20:46:41.952610
+Start name method: get_output_result
+
+End time: 2023-02-27 20:46:41.954605
+End name method: get_output_result
+URL: https://demoqa.com/radio-button
+-----
+
+-----
+Test: tests/elements_test.py::TestElements::TestRadioButton::test_radio_button (call)
+Start time: 2023-02-27 20:46:41.969565
+Start name method: click_on_the_radio_button
+
+End time: 2023-02-27 20:46:42.007464
+End name method: click_on_the_radio_button
+URL: https://demoqa.com/radio-button
+-----
+
+-----
+Test: tests/elements_test.py::TestElements::TestRadioButton::test_radio_button (call)
+Start time: 2023-02-27 20:46:42.008462
+Start name method: get_output_result
+
+End time: 2023-02-27 20:46:42.010456
+End name method: get_output_result
+URL: https://demoqa.com/radio-button
+-----
+
+-----
+Test: tests/elements_test.py::TestElements::TestWebTable::test_web_table_add_person (call)
+Start time: 2023-02-27 20:46:50.112228
+Start name method: add_new_person
+
+End time: 2023-02-27 20:46:50.550856
+End name method: add_new_person
+URL: https://demoqa.com/webtables
+-----
+
+-----
+Test: tests/elements_test.py::TestElements::TestWebTable::test_web_table_add_person (call)
+Start time: 2023-02-27 20:46:50.550856
+Start name method: check_new_added_person
+
+End time: 2023-02-27 20:46:50.686463
+End name method: check_new_added_person
+URL: https://demoqa.com/webtables
+-----
+
+-----
+Test: tests/elements_test.py::TestElements::TestWebTable::test_web_table_search_person (call)
+Start time: 2023-02-27 20:46:56.737986
+Start name method: add_new_person
+
+End time: 2023-02-27 20:46:57.168675
+End name method: add_new_person
+URL: https://demoqa.com/webtables
+-----
+
+-----
+Test: tests/elements_test.py::TestElements::TestWebTable::test_web_table_search_person (call)
+Start time: 2023-02-27 20:46:57.168675
+Start name method: search_some_person
+
+End time: 2023-02-27 20:46:57.301319
+End name method: search_some_person
+URL: https://demoqa.com/webtables
+-----
+
+-----
+Test: tests/elements_test.py::TestElements::TestWebTable::test_web_table_search_person (call)
+Start time: 2023-02-27 20:46:57.301319
+Start name method: check_search_person
+
+End time: 2023-02-27 20:46:57.316279
+End name method: check_search_person
+URL: https://demoqa.com/webtables
+-----
