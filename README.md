@@ -3,7 +3,7 @@
 <h4 dir="auto"><em>Для запуска тестов необходимо:</em></h4>
 <ol>
   <li>Скачать проект с удаленного репозитория на свой локальный, с помощью команды:<br>
-    <code>git clone https://github.com/Aleks-QA/selenium_python_101internet.git</code></li>
+    <code>git clone https://github.com/Aleks-QA/selenium_python_demoqa.git</code></li>
   
   <li>Открыть проект на установленной заранее IDE,</li>
   
