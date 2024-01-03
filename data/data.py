@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 
+
 # создание рандомных данных
 @dataclass
 class Person:
@@ -15,4 +16,3 @@ class Person:
     age: int = None
     salary: int = None
     department: str = None
-

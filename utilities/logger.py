@@ -24,7 +24,6 @@ class Logger():
 
     @classmethod
     def add_end_step(cls, url: str, method: str):
-
         data_to_add = f"End time: {str(datetime.datetime.now())}\n"
         data_to_add += f"End name method: {method}\n"
         data_to_add += f"URL: {url}"
